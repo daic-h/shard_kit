@@ -1,0 +1,23 @@
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+Style/Documentation:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+Style/SpaceInsideBlockBraces:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
