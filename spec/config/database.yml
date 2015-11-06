@@ -1,0 +1,37 @@
+default: &default
+  adapter: mysql2
+  username: root
+  password:
+  host: localhost
+  port: 3306
+  encoding: utf8
+  database: sharding_kit_test
+
+test:
+  <<: *default
+  connections:
+    shard_1:
+      <<: *default
+      database: sharding_kit_shard_1_test
+      group: group_1
+    shard_2:
+      <<: *default
+      database: sharding_kit_shard_2_test
+      group: group_1
+    shard_3:
+      <<: *default
+      database: sharding_kit_shard_3_test
+      group: group_2
+    shard_4:
+      <<: *default
+      database: sharding_kit_shard_4_test
+      group:
+        - group_2
+        - group_3
+    shard_5:
+      <<: *default
+      database: sharding_kit_shard_5_test
+      group: group_4
+    shard_6:
+      <<: *default
+      database: sharding_kit_shard_6_test
